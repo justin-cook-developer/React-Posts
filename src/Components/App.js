@@ -62,8 +62,8 @@ class App extends React.Component {
 
           <Switch>
             <Route path="/" exact render={() => {
-             const posts = this.state.posts.filter(post => post.title.includes(this.state.filterText));
-             return <HomeContainer
+              const posts = this.state.posts.filter(post => post.title.includes(this.state.filterText));
+              return <HomeContainer
                 handleTogglingMode={this.handleTogglingMode}
                 handleAddPost={this.handleAddPost}
                 posts={posts}
