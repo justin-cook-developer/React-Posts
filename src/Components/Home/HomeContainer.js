@@ -9,8 +9,8 @@ const HomeContainer = ({ posts, addMode, handleTogglingMode, handleAddPost }) =>
     <main className="section">
       {
         addMode
-        ? <Form handleTogglingMode={handleTogglingMode} onSubmit={handleAddPost} />
-        : <PostList posts={posts} handleTogglingMode={handleTogglingMode} />
+        ? <Form handleTogglingMode={() => handleTogglingMode('add')} onSubmit={handleAddPost} />
+        : <PostList posts={posts} handleTogglingMode={() => handleTogglingMode('add')} />
       }
     </main>
   );

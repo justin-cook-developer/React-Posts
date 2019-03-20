@@ -11,7 +11,6 @@ export const getPosts = async number => {
   }
 };
 
-
 export const makePost = async postDetails => {
   try {
     const response = await axios.post(
@@ -24,3 +23,25 @@ export const makePost = async postDetails => {
     console.log(e);
   }
 };
+
+export const updatePost = async post => {
+  try {
+    const response = await axios.put(`https://jsonplaceholder.typicode.com/posts/${post.id}`, {
+      title: post.title,
+      body: post.body,
+    });
+    const updatedPost = await response.data;
+    return updatedPost;
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+export const deletePost = async id => {
+  try {
+    await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    return 'success';
+  } catch(e) {
+    console.log(e);
+  }
+}

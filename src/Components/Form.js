@@ -16,7 +16,7 @@ class Form extends React.Component {
 
   handleCancel = e => {
     e.preventDefault();
-    this.props.handleTogglingMode('add');
+    this.props.handleTogglingMode();
   }
 
   handleSubmit = e => {
@@ -29,21 +29,21 @@ class Form extends React.Component {
       <form className="box" onSubmit={this.handleSubmit}>
         <div className="field">
           <label className="label" htmlFor="title">Title:</label>
-          <div class="control">
+          <div className="control">
             <input className="input" type="text" id="title" name="title" value={this.state.title} onChange={this.handleInput} />
           </div>
         </div>
         <div className="field">
           <label className="label" htmlFor="body">Body:</label>
-          <div class="control">
-            <input className="input" type="text" id="body" name="body" value={this.state.body} onChange={this.handleInput} />
+          <div className="control">
+            <textarea className="input textarea" type="text" id="body" name="body" value={this.state.body} onChange={this.handleInput} />
           </div>
         </div>
         <div className="field is-grouped">
-          <p class="control">
+          <p className="control">
             <button className="button is-warning is-small is-outlined" onClick={this.handleCancel}>Cancel</button>
           </p>
-          <p class="control">
+          <p className="control">
             <button className="button is-primary is-small is-outlined" onClick={this.handleSubmit}>Submit</button>
           </p>
         </div>
