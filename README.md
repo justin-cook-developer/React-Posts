@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Purpose
+
+The purpose of this project was to create a front end CRUD application. I used JSONPlaceHolder as a mock database. I also experimented with Bulma CSS.
+
 ## Available Scripts
 
 In the project directory, you can run:
