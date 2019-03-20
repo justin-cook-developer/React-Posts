@@ -6,7 +6,7 @@ const Post = ({ post }) => {
   console.log(post)
   return (
     <li>
-      <Link to={`/post/${post.id}`} >{post.title}</Link>
+      <Link to={`/post/${post.id}`} className="list-item" >{post.title}</Link>
     </li>
   );
 };
@@ -21,9 +21,11 @@ const PostList = ({ posts, handleTogglingMode }) => {
   ));
 
   return (
-    <div>
-      <button onClick={() => handleTogglingMode('add')}>Add Post</button>
-      <ul>
+    <div className="box">
+      <div class="content">
+        <button className="button is-normal is-primary" onClick={() => handleTogglingMode('add')}>Add Post</button>
+      </div>
+      <ul className="list is-hoverable">
         {postElements}
       </ul>
     </div>

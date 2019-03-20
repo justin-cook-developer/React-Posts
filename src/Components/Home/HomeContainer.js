@@ -6,7 +6,7 @@ import Form from '../Form';
 
 const HomeContainer = ({ posts, addMode, handleTogglingMode, handleAddPost }) => {
   return (
-    <main>
+    <main className="section">
       {
         addMode
         ? <Form handleTogglingMode={handleTogglingMode} onSubmit={handleAddPost} />

@@ -26,18 +26,26 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor="title">Title:</label>
-          <input type="text" id="title" name="title" value={this.state.title} onChange={this.handleInput} />
+      <form className="box" onSubmit={this.handleSubmit}>
+        <div className="field">
+          <label className="label" htmlFor="title">Title:</label>
+          <div class="control">
+            <input className="input" type="text" id="title" name="title" value={this.state.title} onChange={this.handleInput} />
+          </div>
         </div>
-        <div>
-          <label htmlFor="body">Body:</label>
-          <input type="text" id="body" name="body" value={this.state.body} onChange={this.handleInput} />
+        <div className="field">
+          <label className="label" htmlFor="body">Body:</label>
+          <div class="control">
+            <input className="input" type="text" id="body" name="body" value={this.state.body} onChange={this.handleInput} />
+          </div>
         </div>
-        <div>
-          <button onClick={this.handleCancel}>Cancel</button>
-          <button onClick={this.handleSubmit}>Submit</button>
+        <div className="field is-grouped">
+          <p class="control">
+            <button className="button is-warning is-small is-outlined" onClick={this.handleCancel}>Cancel</button>
+          </p>
+          <p class="control">
+            <button className="button is-primary is-small is-outlined" onClick={this.handleSubmit}>Submit</button>
+          </p>
         </div>
       </form>
     );

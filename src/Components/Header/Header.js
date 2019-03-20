@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import Navigation from './Navigation';
 import Search from './Search';
 
+const manualStyle = {
+  marginTop: 15,
+};
+
 const Header = (props) => {
   return (
-    <header>
-      <Navigation />
-      <Search {...props} />
+    <header className="level" style={manualStyle}>
+      <Navigation className="level-left" />
+      <Search className="level-right" {...props} />
     </header>
   );
 };
